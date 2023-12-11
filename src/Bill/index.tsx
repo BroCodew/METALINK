@@ -1,8 +1,6 @@
 import "./index.scss";
 import PopupActivity from "./billComponent/billActivity";
 import PopupBillMethod from "./billComponent/billMethod";
-import React from "react";
-import ShowAction from "../../static/showAction.png";
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import { images } from "../static/icon";
 
