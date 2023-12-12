@@ -74,18 +74,32 @@ const PopupBillMethod = () => {
               <span className={"font-upper-balance"}>$0.00</span>
             </div>
           </div>
-          <div className={"method-payment content-background"}>
+          <div
+            className={"method-payment content-background"}
+            style={{ paddingBottom: 25 }}
+          >
             <p className={"font-upper-balance"}>Payment methods</p>
           </div>
           <div className={"method-limit content-background"}>
-            <p className={"limit-content font-upper-balance"}>
+            <p
+              className={"limit-content font-upper-balance"}
+              style={{ paddingBottom: 15 }}
+            >
               Account spending limit
             </p>
-            <p className={"limit-text font-down-balance"}>
+            <p
+              className={"limit-text font-down-balance"}
+              style={{ fontSize: 13 }}
+            >
               Control your total ad costs by setting an account spending limit.
               Ads will pause if you reach your limit and won't run again unless
               you change it.
-              <a style={{ color: "rgb(10 88 202)" }}>
+              <a
+                style={{
+                  color: "rgb(11 110 255)",
+                  textDecoration: "underline",
+                }}
+              >
                 Learn more about account spending limits
               </a>
             </p>

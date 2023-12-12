@@ -1,4 +1,7 @@
 import "./index.scss";
+import PMActivity from "../assets/paymentActivity";
+import PMMethod from "../assets/paymentMethod";
+import PMSelect from "../assets/paymentSelect";
 import PopupActivity from "./billComponent/billActivity";
 import PopupBillMethod from "./billComponent/billMethod";
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
@@ -14,7 +17,7 @@ const PopupBill = () => {
         <div className="bill-body" style={{ height: "100vh" }}>
           <div className="bill-title">
             <div className={"title-tab"}>
-              <Tabs variant="soft-rounded">
+              <Tabs>
                 <div className={"tab"}>
                   <TabList className="title-action">
                     <Tab
@@ -22,16 +25,21 @@ const PopupBill = () => {
                         color: "#000",
                         bg: "rgb(170 201 255)",
                         borderRadius: "10px",
+                        border: "none",
                       }}
+                      p={0}
+                      style={{ width: "185px", outline: "none", color: "#000" }}
+                      mb={2}
+                      mt={2}
                     >
                       <div className="action-payment flexContent">
-                        <img
-                          className="payment-image"
-                          alt=""
-                          src={images.PaymentMethod}
-                          style={{ backgroundColor: "transparent" }}
-                        />
-                        <p className={"payment-title"}>Payment methods</p>
+                        <PMMethod />
+                        <p
+                          style={{ paddingLeft: 5 }}
+                          className={"payment-title"}
+                        >
+                          Payment methods
+                        </p>
                       </div>
                     </Tab>
 
@@ -41,24 +49,22 @@ const PopupBill = () => {
                         bg: "rgb(170 201 255)",
                         borderRadius: "10px",
                       }}
+                      p={0}
+                      style={{ width: "185px", outline: "none" }}
                     >
                       <div className="action-payment flexContent">
-                        <img
-                          className="payment-image"
-                          alt=""
-                          src={images.PaymentActivity}
-                          style={{ backgroundColor: "transparent" }}
-                        />
-                        <p className={"payment-title"}>Payment Activity</p>
+                        <PMActivity />
+                        <p
+                          style={{ paddingLeft: 5 }}
+                          className={"payment-title"}
+                        >
+                          Payment Activity
+                        </p>
                       </div>
                     </Tab>
 
                     <div className="action-activity flexEnd">
-                      <img
-                        className="activity-image "
-                        alt=""
-                        src={images.ShowAction}
-                      />
+                      <PMSelect />
                     </div>
                   </TabList>
                   <TabPanels>
