@@ -7,7 +7,6 @@ import { images } from "../../../assets/images";
 const PopupBillMethod = (props: any) => {
   const { dataBill } = props;
 
-
   function formatCurrency(amount: any) {
     const roundedAmount = Math.round(amount * 100) / 100;
     const formattedAmount = roundedAmount.toFixed(2);
@@ -199,20 +198,30 @@ const PopupBillMethod = (props: any) => {
                           fontSize: 16,
                           fontWeight: 700,
                           color: "rgb(0, 0, 0)",
-                          // textTransform: "lowercase",
+                          textTransform: "none",
                         }}
                       >
-                        DATE
+                        Date
                       </Th>
                       <Th
                         className={"font-upper-balance"}
-                        style={{ fontSize: 16, fontWeight: 700, color: "#000" }}
+                        style={{
+                          fontSize: 16,
+                          fontWeight: 700,
+                          color: "#000",
+                          textTransform: "none",
+                        }}
                       >
                         Payment method
                       </Th>
                       <Th
                         className={"font-upper-balance"}
-                        style={{ fontSize: 16, fontWeight: 700, color: "#000" }}
+                        style={{
+                          fontSize: 16,
+                          fontWeight: 700,
+                          color: "#000",
+                          textTransform: "none",
+                        }}
                       >
                         Amount
                       </Th>
@@ -222,6 +231,7 @@ const PopupBillMethod = (props: any) => {
                           fontSize: 16,
                           fontWeight: 700,
                           color: "rgb(0, 0, 0)",
+                          textTransform: "none",
                         }}
                       >
                         Status
@@ -231,10 +241,20 @@ const PopupBillMethod = (props: any) => {
                   <Tbody>
                     {dataBill.billingLastTime.map((item: any) => (
                       <Tr>
-                        <Th fontSize={"16px"} fontWeight={"400"} color={"#000"}>
+                        <Th
+                          style={{ textTransform: "none" }}
+                          fontSize={"16px"}
+                          fontWeight={"400"}
+                          color={"#000"}
+                        >
                           {formatDateFromTimestamp(item.transaction_time)}
                         </Th>
-                        <Th fontSize={"16px"} fontWeight={"400"} color={"#000"}>
+                        <Th
+                          fontSize={"16px"}
+                          fontWeight={"400"}
+                          color={"#000"}
+                          style={{ textTransform: "none" }}
+                        >
                           {item.payment_method_label}
                         </Th>
                         <Th fontSize={"16px"} fontWeight={"400"} color={"#000"}>
@@ -247,6 +267,7 @@ const PopupBillMethod = (props: any) => {
                                 ? "background-paid"
                                 : "background-fail"
                             }
+                            style={{ textTransform: "none" }}
                           >
                             {item.formatted_payment_status}
                           </span>
@@ -315,10 +336,7 @@ const PopupBillMethod = (props: any) => {
                 <p className={"font-right-key"}>Ngưỡng</p>
               </div>
               <div className={"flex-value"}>
-                <p className={"backGround-blue"}>
-                  {dataBill.h_threshold}
-                  USD
-                </p>
+                <p className={"backGround-blue"}>{dataBill.h_threshold} USD</p>
                 <p className={"backGround-green"}>{dataBill.s_threshold} $</p>
               </div>
             </div>

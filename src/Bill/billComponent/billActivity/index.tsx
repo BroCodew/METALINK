@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 
 const PopupActivity = ({ dataBill }: { dataBill: any }) => {
-
   function formatDateFromTimestamp(timestamp: any) {
     const date = new Date(timestamp * 1000);
 
@@ -95,6 +94,7 @@ const PopupActivity = ({ dataBill }: { dataBill: any }) => {
                       fontSize: 16,
                       fontWeight: "700",
                       color: "rgb(0, 0, 0)",
+                      textTransform: "none",
                     }}
                   >
                     Transaction ID
@@ -106,6 +106,7 @@ const PopupActivity = ({ dataBill }: { dataBill: any }) => {
                       fontSize: 16,
                       fontWeight: "700",
                       color: "rgb(0, 0, 0)",
+                      textTransform: "none",
                     }}
                   >
                     Date
@@ -116,6 +117,7 @@ const PopupActivity = ({ dataBill }: { dataBill: any }) => {
                       fontSize: 16,
                       fontWeight: "700",
                       color: "rgb(0, 0, 0)",
+                      textTransform: "none",
                     }}
                   >
                     Amount
@@ -126,6 +128,7 @@ const PopupActivity = ({ dataBill }: { dataBill: any }) => {
                       fontSize: 16,
                       fontWeight: "700",
                       color: "rgb(0, 0, 0)",
+                      textTransform: "none",
                     }}
                   >
                     Payment method
@@ -136,6 +139,7 @@ const PopupActivity = ({ dataBill }: { dataBill: any }) => {
                       fontSize: 16,
                       fontWeight: "700",
                       color: "rgb(0, 0, 0)",
+                      textTransform: "none",
                     }}
                   >
                     VAT invoice ID
@@ -146,6 +150,7 @@ const PopupActivity = ({ dataBill }: { dataBill: any }) => {
                       fontSize: 16,
                       fontWeight: "700",
                       color: "rgb(0, 0, 0)",
+                      textTransform: "none",
                     }}
                   >
                     Payment status
@@ -169,6 +174,8 @@ const PopupActivity = ({ dataBill }: { dataBill: any }) => {
                       style={{
                         fontWeight: "400",
                         fontSize: 13,
+                        textTransform: "none",
+
                         color: "rgb(0, 0, 0)",
                       }}
                     >
@@ -189,6 +196,7 @@ const PopupActivity = ({ dataBill }: { dataBill: any }) => {
                           display: "flex",
                           justifyContent: "flexStart",
                           alignItems: "center",
+                          textTransform: "none",
                         }}
                       >
                         <img
@@ -211,7 +219,7 @@ const PopupActivity = ({ dataBill }: { dataBill: any }) => {
                     >
                       {item.vat_invoice_id}
                     </Th>
-                    <Th style={{ fontWeight: "500" }}>
+                    <Th style={{ fontWeight: "500", textTransform: "none" }}>
                       <span
                         className={
                           item.formatted_payment_status === "Paid"
